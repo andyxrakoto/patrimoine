@@ -30,7 +30,7 @@ public class PatrimoineTest {
     @InjectMocks
     private PatrimoineController patrimoineController;
 
-    public void PatrimoineControllerTest() {
+    public void PatrimoineTest() {
         MockitoAnnotations.openMocks(this);
     }
 
@@ -48,7 +48,7 @@ public class PatrimoineTest {
     }
 
     @Test
-    public void testGetAllPatrimoineNotFound() throws Exception {
+    public void testGetPatrimoineNotFound() throws Exception {
         int id = 1;
         when(patrimoineService.getPatrimoine(id)).thenReturn(null);
 

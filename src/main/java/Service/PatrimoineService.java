@@ -49,7 +49,7 @@ public class PatrimoineService implements RepositoryInterface {
             patrimoinesListes.add(patrimoineDetails);
         } else if (id > patrimoinesListes.size()) {
             while (patrimoinesListes.size() < id) {
-                patrimoinesListes.add(new Patrimoine(5, "Jane Doe", null));
+                patrimoinesListes.add(new Patrimoine(5, "Jane Doe", LocalDateTime.now()));
             }
             patrimoinesListes.add(patrimoineDetails);
         }

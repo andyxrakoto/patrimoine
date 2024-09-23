@@ -42,7 +42,13 @@ public class PatrimoineController {
         }
     }
 
-    public ResponseEntity<Patrimoine> getAllPatrimoine(int id) {
-        return null;
+    public ResponseEntity<Patrimoine> getAllPatrimoine(int id) throws IOException {
+        Patrimoine patrimoine = patrimoineService.getPatrimoine(id);
+
+        if (patrimoine == null) {
+            return ResponseEntity.notFound().build();
+        }
+
+        return ResponseEntity.ok(patrimoine);
     }
 }
